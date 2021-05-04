@@ -137,7 +137,7 @@ const Dashboard = () => {
                     let isReady = await waitUntilSocketOpen();
                     if (isReady === true) {
                         websocket.send(JSON.stringify({ type: "getMarket", id: market}));
-                        fetchOutcomes(market);
+                        loadOutcomes(market);
                     } else {
                         setErrors(["Websocket did not open in time. "])
                     }
@@ -180,7 +180,7 @@ const Dashboard = () => {
         
     }
     //Function to request outcome information for a market
-    const fetchOutcomes = async(MarketId: string) => {
+    const loadOutcomes = async(MarketId: string) => {
         if(!loadedOutcomes.includes(MarketId)) {
         await waitUntilSocketOpen();
         if(liveMarketData2[MarketId] !== null) {
@@ -259,7 +259,7 @@ const Dashboard = () => {
 
 
                               return (
-                                  <Events key={event["eventId"]} eventdata={event} marketdata={eventmarketdata} outcomedata={marketoutcomedata} handleAddToBetslip={handleAddToBetslip} loadMarkets={loadMarkets} loadOutcomes={fetchOutcomes} loadAllMarkets={loadAllMarkets} oddsView={decimal} toggleNotification={toggleNotification} handleError={(error)=> setErrors([error])} ></Events>
+                                  <Events key={event["eventId"]} eventdata={event} marketdata={eventmarketdata} outcomedata={marketoutcomedata} handleAddToBetslip={handleAddToBetslip} loadMarkets={loadMarkets} loadOutcomes={loadOutcomes} loadAllMarkets={loadAllMarkets} oddsView={decimal} toggleNotification={toggleNotification} handleError={(error)=> setErrors([error])} ></Events>
                  )                 
      
                 } else {

@@ -316,10 +316,10 @@ const Dashboard = () => {
             <Grid container spacing={1} direction="row">
                 <AppBar position="sticky" className={`${classes.secondaryColor} ${classes.center}`}>
                     <Toolbar>
-                        <Grid item xs={10}>
+                        <Grid item xs={9}>
                             <Typography>Betting Website</Typography>
                         </Grid>
-                        <Grid item xs={1}>
+                        <Grid item xs={2}>
                             <FormControlLabel control={<Switch data-testid="oddsswitch" size="small" checked={decimal} onChange={() => setDecimal(!decimal)} />} label= {decimal ? "Decimal" : "Fractional"} />
                         </Grid>
                         <Grid item xs={1}>

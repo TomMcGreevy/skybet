@@ -18,8 +18,12 @@ Follow instructions to run api in Docker:
 ## Download and run project from github
 Download project from github:
 ### https://github.com/tommcgreevy/skybet
+
+or:
+### git clone https://github.com/TomMcGreevy/skybet.git
+
 Navigate to folder in terminal
-### `cd /skybet`
+### `cd /skybet-master`
 Run in terminal:
 ### `npm start`
 Runs the app in the development mode.\

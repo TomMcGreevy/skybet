@@ -282,7 +282,7 @@ const Dashboard = () => {
         }
     }
 
-    const {data} = useQuery<{[key: string]: any}>(
+    useQuery<{[key: string]: any}>(
         'liveEvents', fetchLiveEventData
     );
 

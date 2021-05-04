@@ -24,6 +24,8 @@ or:
 
 Navigate to folder in terminal
 ### `cd /skybet-master`
+install packages
+### `npm install`
 Run in terminal:
 ### `npm start`
 Runs the app in the development mode.\
